@@ -6,7 +6,25 @@
  // Examples
 
  // input   =  Hello, World!
- // result  =  1112111121311
+ // result  =  1112111121311 1112111121311
 
  // input   =  aaaaaaaaaaaa
  // result  =  123456789101112
+
+ function occurence(str){
+     var count = 1;
+     var string = ""
+     for (var i=0 ; i<str.length ; i++){ 
+     for (var j = i ; j>=0 ; j--){
+        if (j===0){
+            string += count;
+            count = 1
+        } 
+        if ((str[i]===str[j])&& (i !== j)){
+             count+= 1
+         }
+
+     }
+    }
+    return string;
+ }
