@@ -11,6 +11,7 @@
  // input   =  aaaaaaaaaaaa
  // result  =  123456789101112
 
+<<<<<<< HEAD
  function occurence(str){
      var count = 1;
      var string = ""
@@ -28,3 +29,8 @@
     }
     return string;
  }
+=======
+
+
+ 
+>>>>>>> 8b2322f64f8f3bd6a03885315c81ee9cadbe4dac
