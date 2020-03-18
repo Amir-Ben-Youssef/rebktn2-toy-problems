@@ -11,12 +11,12 @@ var firstNonRepeatedCharacter = function(string) {
   var strarray = string.split('')
   var arr = [];
   for (var i = 0 ; i< strarray.length ; i++){
-    var splice = false
+    var occur = false
     for (var j = 0 ; j< strarray.length ; j++){
-      if ((splice === false) && (strarray[i]=== strarray[j]) && (i !== j)){
-        splice = true;
+      if ((occur === false) && (strarray[i]=== strarray[j]) && (i !== j)){
+        occur = true;
       }
-      else if ((splice === false) && (strarray[i] !== strarray[j]) && (j === strarray.length -1)){
+      else if ((occur === false) && (strarray[i] !== strarray[j]) && (j === strarray.length -1)){
         arr.push(string[i])
         console.log(i)
       }
