@@ -14,12 +14,14 @@
 var deepEquals = function(apple, orange) {
   var result = true;
   for (var key in apple){
-    if (apple[key] !== orange[key]){
-      result = false
-    }
-    if (typeof apple[key] === "object"){
-      result = result || deepEquals(apple[key], orange[key])
-    }
-  } 
+    if (result === true){
+      if (apple[key] !== orange[key]){
+        result = false
+      }
+      if (typeof apple[key] === "object"){
+        result =  deepEquals(apple[key], orange[key])
+      }
+    } 
+  }
   return result;
 };
